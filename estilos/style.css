@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/*Importando Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+/*CORES DO PROJETO*/
+*:root{
+    --cor01: rgb(239, 231, 213);
+    --cor02: rgb(251, 251, 8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
