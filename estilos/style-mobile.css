@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/*Importando Fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*CORES DO PROJETO*/
+*:root{
+    --cor01: #eee7d6;
+    --cor02: #fccc2c;
+    --cor03: #311a09;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    width: 100%;
+    background-color: var(--cor01);
+}
+
+.logo{
+    width: 30%;
+}
+
+.nav-item{
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-item:hover{
+    background-color: #d5cbb9;
+    transition: 0.3s;
+}
+
+#section-hero{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.521);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  bottom: -3px; 
+}
+
+.carousel-indicators li {
+  width: 10px;    
+  height: 10px;
+  border-radius: 50%;    
+  background-color: gray; 
+  border: 2px solid white;
+  opacity: 0.5;
+}
+
+#section-combos h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    margin: 20px;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    width: ;
+}
+
+.card-img{
+    max-width: 25%;
+}
+
+
+
+
+
+
