@@ -7,8 +7,10 @@
     <title>BurgerShow</title>
 
     <!--IMPORTANDO BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 
     <!--CSS-MOBILE-->
     <link rel="stylesheet" href="estilos/style-mobile.css">
@@ -87,7 +89,10 @@
         <section id="section-combos">
             <h2 class="text-start ml-3 mt-5 mb-3">Confira nossos combos</h2>
             <div class="card-group">
-                <div class="card ml-3 mr-3 shadow p-2 mb-2 bg-white rounded">
+
+                <!-- CARD 1 -->
+                <div class="card ml-3 mr-3 shadow p-2 mb-3 bg-white rounded" data-bs-toggle="modal"
+                    data-bs-target="#modalCombo01">
                     <div class="row g-0">
                         <div class="col-4">
                             <img class="img-fluid rounded object-cover object-center" src="imagens/combo01.png"
@@ -103,13 +108,161 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center pr-3">
                                     <span class="card-preço">R$ 32,90</span>
-                                    <button class="btn btn-primary add-btn">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card ml-3 mr-3 shadow p-2 mb-2 bg-white rounded">
+
+                <!-- MODAL 1 -->
+                <div class="modal fade" id="modalCombo01" tabindex="-1" role="dialog"
+                    aria-labelledby="modalCombo01Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                            <!-- MODAL 01 - HEADER -->
+                            <div class="modal-header sticky-top bg-white z-3">
+                                <h5 class="modal-title" id="modalCombo01Label">Combo Single | Individual</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Fechar"></button>
+                            </div>
+
+                            <!-- MODAL 01 - BODY -->
+                            <div class="modal-body p-4">
+                                <img src="imagens/combo01.png" class="img-fluid rounded mb-3" alt="Hambúrguer Clássico">
+                                <p class="mb-1"><strong>Descrição:</strong></p>
+                                <p class="text-justify"><em>Uma combinação irresistível para quem ama o sabor de um bom
+                                        hambúrguer! Escolha o seu hambúrguer favorito preparado com ingredientes frescos
+                                        e pão artesanal, acompanhado de uma porção crocante de batatas fritas douradas (150g) e
+                                        uma lata gelada do seu refrigerante preferido. O equilíbrio perfeito entre
+                                        sabor, textura e frescor — tudo em um combo feito sob medida para matar a sua
+                                        fome com estilo.</em>
+                                </p>
+
+                                <!-- HABÚRGUER MODAL 01 -->
+                                <p class="mt-4"><strong>Escolha o artesanal do seu combo:</strong></p>
+                                <form>
+                                    <div class="list-group">
+                                        <label
+                                            class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded custom-radio">
+                                            <div class="pl-4">
+                                                <input class="form-check-input" type="radio" name="hamburguer"
+                                                    value="classico">
+                                                Single Burger
+                                            </div>
+                                            <div>
+                                                <img style="width:90px;height:70px; object-fit:cover;"
+                                                    src="imagens/hmb06.jpg" class="img-fluid rounded float-left"
+                                                    alt="">
+                                            </div>
+                                        </label>
+
+                                        <label
+                                            class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded">
+                                            <div class="pl-4">
+                                                <input class="form-check-input" type="radio" name="hamburguer"
+                                                    value="classico">
+                                                Bacon & Cheese
+                                            </div>
+                                            <div>
+                                                <img style="width:90px;height:70px; object-fit:cover;"
+                                                    src="imagens/hmb04.png" class="img-fluid rounded float-left"
+                                                    alt="">
+                                            </div>
+                                        </label>
+
+                                        <label
+                                            class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded">
+                                            <div class="pl-4">
+                                                <input class="form-check-input" type="radio" name="hamburguer"
+                                                    value="classico">
+                                                Chicken Salad
+                                            </div>
+                                            <div>
+                                                <img style="width:90px;height:70px; object-fit:cover;"
+                                                    src="imagens/hmb05.png" class="img-fluid rounded float-left"
+                                                    alt="">
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <!-- BEBIDA MODAL 01 -->
+                                    <p class="mt-4"><strong>Qual bebida você vai levar hoje:</strong></p>
+                                    <label
+                                        class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded">
+                                        <div class="pl-4">
+                                            <input class="form-check-input" type="radio" name="bebida" value="classico">
+                                            Coca-Cola
+                                            <span class="badge badge-danger">Original</span><br>
+                                            <span class="badge badge-secondary">350ml</span>
+                                        </div>
+                                        <div>
+                                            <img style="width:90px;height:80px; object-fit:cover;"
+                                                src="imagens/bebida-01.png" class="img-fluid rounded float-left"
+                                                alt="refrigerante">
+                                        </div>
+                                    </label>
+
+                                    <label
+                                        class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded">
+                                        <div class="pl-4">
+                                            <input class="form-check-input" type="radio" name="bebida" value="classico">
+                                            Coca-Cola
+                                            <span class="badge badge-dark">Zero</span><br>
+                                            <span class="badge badge-secondary">350ml</span>
+                                        </div>
+                                        <div>
+                                            <img style="width:90px;height:80px; object-fit:contain;"
+                                                src="imagens/bebida-05.png" class="img-fluid rounded float-left"
+                                                alt="refrigerante">
+                                        </div>
+                                    </label>
+
+                                    <label
+                                        class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-2 bg-white rounded">
+                                        <div class="pl-4">
+                                            <input class="form-check-input" type="radio" name="bebida" value="classico">
+                                            Guaraná
+                                            <span class="badge badge-success">Original</span><br>
+                                            <span class="badge badge-secondary">350ml</span>
+                                        </div>
+                                        <div>
+                                            <img style="width:90px;height:80px; object-fit:cover;"
+                                                src="imagens/bebida-02.png" class="img-fluid rounded float-left"
+                                                alt="refrigerante">
+                                        </div>
+                                    </label>
+
+                                    <!-- PORÇÃO MODAL 01 -->
+                                    <p class="mt-4"><strong>Já adicionamos sua porção de fritas:</strong></p>
+                                    <label
+                                        class="list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-4 bg-white rounded">
+                                        <div class="pl-4">
+                                            <input class="form-check-input" type="radio" name="porcao" value="classico"
+                                                checked>
+                                            Batata-frita
+                                            <span class="badge badge-secondary">150g</span>
+                                        </div>
+                                        <div>
+                                            <img style="width:90px;height:80px; object-fit:cover;"
+                                                src="imagens/porcao02.png" class="img-fluid rounded float-left"
+                                                alt="batatas-fritas">
+                                        </div>
+                                    </label>
+
+                                    <!-- MODAL 01 - FOOTER -->
+                                    <div class="modal-footer m-0 p-0 justify-content-between alig">
+                                    <span class="total-combo01"><strong>Total:</strong> R$ 35,00</span>
+                                    <button type="button" class="btn btn-primary">Adicionar no carrinho</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- CARD 2 -->
+                <div class="card ml-3 mr-3 shadow p-2 mb-3 bg-white rounded" data-bs-toggle="modal"
+                    data-bs-target="#modalProduto2">
                     <div class="row g-0">
                         <div class="col-4">
                             <img class="img-fluid rounded object-cover object-center" src="imagens/combo02.png"
@@ -125,13 +278,38 @@
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center pr-3">
                                     <span class="card-preço">R$ 49,90</span>
-                                    <button class="btn btn-primary add-btn">+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card ml-3 mr-3 shadow p-2 mb-2 bg-white rounded">
+
+                <!-- MODAL 2 -->
+                <div class="modal fade" id="modalProduto2" tabindex="-1" aria-labelledby="modalProduto2Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalProduto2Label">Combo Casal | Premium</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Fechar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="imagens/hamburguer1.jpg" class="img-fluid rounded mb-3"
+                                    alt="Hambúrguer Clássico">
+                                <p>Pão brioche artesanal, carne 180g, queijo cheddar e molho especial da casa.</p>
+                                <p><strong>Preço:</strong> R$ 25,00</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary add-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card ml-3 mr-3 shadow p-2 mb-3 bg-white rounded" data-bs-toggle="modal"
+                    data-bs-target="#modalProduto3">
                     <div class="row g-0">
                         <div class="col-4">
                             <img class="img-fluid rounded object-cover object-center" src="imagens/combo03.png"
@@ -145,11 +323,32 @@
                                 <div class="card-text">
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center pr-3">
+                                <div class="d-flex justify-content-start align-items-center pr-3">
                                     <span class="card-preço">R$ 69,90</span>
-                                    <button class="btn btn-primary add-btn">+</button>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL 3 -->
+            <div class="modal fade" id="modalProduto3" tabindex="-1" aria-labelledby="modalProduto3Label"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalProduto3Label">Combo Mega | Família</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="imagens/hamburguer1.jpg" class="img-fluid rounded mb-3" alt="Hambúrguer Clássico">
+                            <p>Pão brioche artesanal, carne 180g, queijo cheddar e molho especial da casa.</p>
+                            <p><strong>Preço:</strong> R$ 25,00</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary add-btn">+</button>
                         </div>
                     </div>
                 </div>
@@ -166,6 +365,30 @@
         </section>
         <section id="section-localizacao">
         </section>
+        <button type="button" class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle"
+            style="width:60px; height:60px; font-size:28px;" data-toggle="modal" data-target="#modalExemplo">+</button>
+
+        <!-- Modal Carrinho-->
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!--IMPORTANDO BOOTSTRAP-->
@@ -178,6 +401,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!--IMPORTANDO SCRIPT LOCAL (FUNCIONALIDADES)-->
     <script src="scripts/contador-item.js"></script>

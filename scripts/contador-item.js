@@ -1,7 +1,7 @@
   function criarContador(botao) {
     let count = 1;
 
-    // Criando Contador
+    // Criando Contador <button class="btn btn-primary add-btn">+</button>
     const counterDiv = document.createElement('div');
     counterDiv.classList.add('d-flex', 'align-items-center', 'gap-2');
 
@@ -33,6 +33,7 @@
       }
     });
   }
+
 
   // Inicializa os botões +
   document.querySelectorAll('.add-btn').forEach(btn => {
